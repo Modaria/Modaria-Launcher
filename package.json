@@ -9,7 +9,7 @@
         "email": "basile_hd@icloud.com",
         "url": "https://github.com/Modaria"
     },
-    "url": "http://launcher.luuxis.fr",
+    "url": "https://manechcraft.alwaysdata.net/launcher-sync",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
