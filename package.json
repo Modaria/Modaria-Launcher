@@ -1,7 +1,7 @@
 {
     "name": "modaria-launcher",
     "preductname": "Modaria Launcher",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Launcher officiel pour Modaria",
     "main": "src/app.js",
     "author": {
