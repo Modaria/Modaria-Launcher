@@ -1,5 +1,5 @@
 /**
- * @author Luuxis
+ * @author _Basile
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 
@@ -30,7 +30,10 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Bienvenue sur Modaria ! ", "author": "Modaria"}
+
+            { "message": "Si tu as des questions, n'hésite pas à les poser sur le Discord", "author": "Modaria"},
+            { "message": "Si tu veux rejoindre le Staff, poste ta candidature dans le salon #--- du Discord", "author": "_Basile"},
+            { "message": "Create est vraiment le meilleur mod !", "author": "FuzeIII"}
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -52,7 +55,7 @@ class Splash {
         this.setStatus(`Recherche de mise à jour...`);
 
         ipcRenderer.invoke('update-app').then().catch(err => {
-            return this.shutdown(`erreur lors de la recherche de mise à jour :<br>${err.message}`);
+            return this.shutdown(`Erreur lors de la recherche de mise à jour. <br> Vérifiez votre connexion internet et réessayez.`);
         });
 
         ipcRenderer.on('updateAvailable', () => {
